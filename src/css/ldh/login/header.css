@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  height: 300px;
+}
+.header-inner {
+  padding: 250px 0 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-inner-home {
+}

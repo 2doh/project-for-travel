@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+eslint
+ruls  
+ "react/react-in-jsx-scope": "off",
+"@typescript-eslint/no-unused-vars" : "off",
+"react/prop-types" : "off"
+마이그레이션 중 테스트용으로 기입, 제거 필요
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# GMU
 
-## Available Scripts
+# 6.09
 
-In the project directory, you can run:
+- plan 페이지 입력 정보 post 성공
 
-### `npm start`
+- calendar 페이지 plan에서 입력한 정보 get 성공, events post 성공
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- allSchedule 페이지 plan에서 입력한 모든 정보 get 성공, events post 성공
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- events get도 성공
 
-### `npm test`
+# 6.10
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- postman 자체 DB로 수정 작동 확인
+- 계획 수정하기 및 삭제하기 만듦
+- 마이페이지 만듦- 다만 로그인 기능 미구현으로 테스트 불가
 
-### `npm run build`
+# 6.12
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 아이디, 비밀번호, 이메일 정규표현식 성공
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- user 테이블에서 만든 uid가 계획 페이지의 tour 테이블로 가는 것 확인. 다만 user테이블의 pk가 넘어가진 않음.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- tour테이블의 pk인 tour_id 가 tour_schedule(세부일정) 테이블로 가는건 확인.
 
-### `npm run eject`
+- tour_schedule에 date 따로 뺌
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- plan/:id 의 경우 새로고침시 캘린더에 나오지 않음
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 남은 할 일
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- 로그인 후 Swagger로 테스트, 수정, 삭제 기능
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- 메인 페이지에서 계획 누를시 /plan/:id 페이지로 이동
+  "proxy": "http://192.168.0.53:8080"
 
-## Learn More
+# 수정필요
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+체크리스트 새로 생성한 리스트 삭제안됨
+체크 모든 tour에서 적용됨
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+get /api/user 마이페이지에서 get으로 보낼 데이터가 유저의 id임
+회원가입시 발급되는 userid를 보내야 하도록 수정 요청해야함
+수정 후 src/apis/ldh/apiuser.js getUserInfo의 axios 부분
+testid1를 isUser로 수정 필요
+
+pages/ldh/ test, test2, tsetItem / components/ldh/ListItem.js 삭제 요망
+
+회원정보수정 없는 비밀번호 입력시 500에러
+이를 statusCode 를 통하여 없으면, 비밀번호가 틀렸습니다 등의 메세지를 보내줘야함
+
+비밀번호수정 put의 파라미터
+upw newPw 두개만
+
+로그인페이지 작업 필요
+
+2024-06-17
+Drop.js 수정
+Main.js 작업
+CheckList.js, List.js, Item.js 컴포넌트 확인 필요
+
+머지 테스트

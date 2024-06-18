@@ -3,53 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>homepage</title>
-    <link rel="stylesheet" href="./css/common.css"/>
-    <link rel="stylesheet" href="./css/reset.css"/>
-    <link rel="stylesheet" href="./css/index/header.css"/>
-    <link rel="stylesheet" href="./css/index/main.css"/>
-    <link rel="stylesheet" href="./css/index/maintop.css"/>
-    <link rel="stylesheet" href="./css/index/mainbottom.css"/>
-    <link rel="stylesheet" href="./css/index/footer.css"/>
-    <script src=""></script>
+    <link rel="stylesheet" href="./css/test.css" />
+    <title>상세 일정 페이지</title>
   </head>
   <body>
-    <div calss="wrap">
-      <header class="header">
-        <div class="header-inner">
-          <ul class="header-inner-menu">
-            <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-5.0 -10.0 110.0 135.0">
-              <g fill-rule="evenodd">
-               <path d="m88.453 60.922c-0.92578-0.32422-1.7969-0.85938-2.5352-1.6016l-35.918-35.914-35.918 35.914c-0.73828 0.74219-1.6094 1.2773-2.5352 1.6016v29.793c0 3.7461 3.0391 6.7852 6.7852 6.7852h20.359v-27.141c0-2.5 2.0234-4.5234 4.5234-4.5234h13.57c2.5 0 4.5234 2.0234 4.5234 4.5234v27.141h20.355c3.7461 0 6.7852-3.0391 6.7852-6.7852z"/>
-               <path d="m88.453 18.336v21.684l8.3867 8.3867c0.88281 0.88281 0.88281 2.3164 0 3.1992l-4.5234 4.5234c-0.88281 0.88281-2.3164 0.88281-3.1992 0l-37.52-37.52c-0.88281-0.88281-2.3164-0.88281-3.1992 0l-37.512 37.516c-0.88281 0.88281-2.3164 0.88281-3.1992 0l-4.5234-4.5234c-0.88281-0.88281-0.88281-2.3164 0-3.1992l45.238-45.238c0.88281-0.88281 2.3164-0.88281 3.1992 0l27.805 27.805v-12.637c0-1.25 1.0117-2.2617 2.2617-2.2617h4.5234c1.2461 0 2.2617 1.0156 2.2617 2.2656z"/>
-              </g>
-             <text x="0.0" y="117.5" font-size="5.0" font-weight="bold" font-family="Arbeit Regular, Helvetica, Arial-Unicode, Arial, Sans-serif" fill="#000000"></text><text x="0.0" y="122.5" font-size="5.0" font-weight="bold" font-family="Arbeit Regular, Helvetica, Arial-Unicode, Arial, Sans-serif" fill="#000000"></text></svg><span>홈</span></li>
-            <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 40" x="0px" y="0px"><path d="M28.60693,31.0415H3.39307A1.72816,1.72816,0,0,1,1.667,29.31543V5.77A1.72816,1.72816,0,0,1,3.39307,4.044H6.82764V3.21A2.20535,2.20535,0,0,1,9.0791.97754a2.20219,2.20219,0,0,1,2.251,2.21973V4.044h2.604V3.21a2.25137,2.25137,0,0,1,4.50244-.01269V4.044h2.604V3.21A2.25137,2.25137,0,0,1,25.543,3.19727V4.044h3.064A1.72816,1.72816,0,0,1,30.333,5.77V29.31543A1.72816,1.72816,0,0,1,28.60693,31.0415ZM3.39307,5.044A.72686.72686,0,0,0,2.667,5.77V29.31543a.72686.72686,0,0,0,.72608.72607H28.60693a.72686.72686,0,0,0,.72608-.72607V5.77a.72686.72686,0,0,0-.72608-.72607h-6.5664v2.252a.5.5,0,0,1-1,0V5.044H14.93408v2.252a.5.5,0,0,1-1,0V5.044H7.82764v2.252a.5.5,0,0,1-1,0V5.044Zm18.64746-1H24.543V3.21a1.2513,1.2513,0,0,0-2.50244.0127Zm-7.10645,0h2.50244V3.21a1.2513,1.2513,0,0,0-2.50244.0127Zm-7.10644,0h2.50244V3.21A1.19992,1.19992,0,0,0,9.07861,1.97754a1.20274,1.20274,0,0,0-1.251,1.24512Zm19.3872,24.37939H4.78516a.49971.49971,0,0,1-.5-.5V11.10059a.49971.49971,0,0,1,.5-.5H27.21484a.49971.49971,0,0,1,.5.5V27.92334A.49971.49971,0,0,1,27.21484,28.42334Zm-5.10742-1h4.60742V22.81592H22.10742Zm-5.60742,0h4.60742V22.81592H16.5Zm-5.60742,0H15.5V22.81592H10.89258Zm-5.60742,0H9.89258V22.81592H5.28516Zm16.82226-5.60742h4.60742V17.2085H22.10742Zm-5.60742,0h4.60742V17.2085H16.5Zm-5.60742,0H15.5V17.2085H10.89258Zm-5.60742,0H9.89258V17.2085H5.28516ZM22.10742,16.2085h4.60742V11.60059H22.10742Zm-5.60742,0h4.60742V11.60059H16.5Zm-5.60742,0H15.5V11.60059H10.89258Zm-5.60742,0H9.89258V11.60059H5.28516Z"/><text x="0" y="47" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Dicky Prayudawanto</text><text x="0" y="52" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg><span>일정보기</span></li>
-            <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 60" x="0px" y="0px"><title>Ui vol.1</title><g data-name="Layer 5"><path d="M45.28125,1.19385H2.71875a.99974.99974,0,0,0-1,1v43.3125a.99974.99974,0,0,0,1,1h42.5625a.99974.99974,0,0,0,1-1V2.19385A.99974.99974,0,0,0,45.28125,1.19385Zm-1,43.3125H3.71875V3.19385h40.5625Z"/><path d="M9.72461,24.7002H23V37.9751a1,1,0,0,0,2,0V24.7002H38.27539a1,1,0,0,0,0-2H25V9.42529a1,1,0,0,0-2,0V22.7002H9.72461a1,1,0,0,0,0,2Z"/></g><text x="0" y="63" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></text><text x="0" y="68" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></text></svg><span>일정추가</span></li>
-            <li><svg class="icon" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" viewBox="0 0 100 125"><g transform="translate(0,-952.36218)"><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="m 13,968.36217 c -3.3136998,0 -5.9999998,2.68619 -5.9999998,6 0,3.31359 2.6863,6 5.9999998,6 l 74,0 c 3.3137,0 6,-2.68641 6,-6 0,-3.31381 -2.6863,-6 -6,-6 z m 0,28 c -3.3136998,0 -5.9999998,2.68619 -5.9999998,6.00003 0,3.3136 2.6863,6 5.9999998,6 l 74,0 c 3.3137,0 6,-2.6864 6,-6 0,-3.31384 -2.6863,-6.00003 -6,-6.00003 z m 0,28.00003 c -3.3136998,0 -5.9999998,2.6862 -5.9999998,6 0,3.3136 2.6863,6 5.9999998,6 l 74,0 c 3.3137,0 6,-2.6864 6,-6 0,-3.3138 -2.6863,-6 -6,-6 z" fill="#000000" fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"/></g><text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></text></svg><span>메뉴</span></li>
-          </ul>
-        </div>
-      </header>
-      <main class="main">
-        <div class="main-top">
-          <div class="main-top-banner">
-            <a href="#" rel="noopnener noreferrer" class="main-top-bannerslide">
-              <div class="banner-inner">
-                <div class="banner-inner-title">여행</div>
-                <div class="banner-inner-subtitle">1234</div>
-                <div class="banner-inner-dday">d-0</div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="main-bottom">
-          <div class="main-bottom-checklist"></div>
-          <div class="main-bottom-calendar"></div>
-        </div>
-      </main>
-      <footer class="footer">
-        <div class="footer-inner"></div>
-      </footer>
+    <div class="container">
+      <h1 class="c-title">
+        <p class="c-text__box">
+          <strong>상세 일정 페이지</strong>
+        </p>
+      </h1>
+    </div>
+    <div class="left-selection">
+      <div class="travel-schedule">
+        <h1 class="travelday-input">
+          <p class="">
+            <div>DAY 1</div>
+            <div>제목</div>
+            <div>날짜</div>
+            <div>종료 날짜</div>
+            <div>소비금</div>
+            <div>시작 시간</div>
+            <div>마감 시간</div>
+          </p>
+        </h1>
+      </div>
     </div>
   </body>
 </html>

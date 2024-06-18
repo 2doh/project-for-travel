@@ -1,0 +1,9 @@
+.main{
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    background-color: beige;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 100px;
+}

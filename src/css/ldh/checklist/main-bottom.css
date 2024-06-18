@@ -1,0 +1,38 @@
+.main-bottom {
+  margin: 30px 0 0;
+}
+.main-bottom-wrap {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main-bottom-check {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.main-bottom-check-list {
+  padding: 5px 30px 5px 5px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  gap: 10px;
+}
+.main-bottom-check-list img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.check-list-contents {
+  font-size: 20px;
+}
+.main-bottom-check-list {
+  position: relative;
+}
+.x-ico {
+  position: absolute;
+  right: 5px;
+}

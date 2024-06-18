@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/login/header.css" />
+    <link rel="stylesheet" href="./css/login/main.css" />
+    <link rel="stylesheet" href="./css/login/footer.css" />
+    <script src="./js/login.js"></script>
+  </head>
+  <body class="login">
+    <div class="wrap">
+      <header class="header">
+        <div class="header-inner">
+          <div class="header-inner-home">
+            <span>홈으로</span>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main-inner">
+          <div class="main-content">
+            <div class="main-content-login">
+              <div class="input-id">
+                <img
+                  src="./images/1564534_customer_man_user_account_profile_icon.svg"
+                  class="profileico"
+                />
+                <div class="id-inner">
+                  <form class="idform">
+                    <input type="text" placeholder="아이디" class="uid" />
+                  </form>
+                </div>
+                <img
+                  src="./images/10758948_x_circle_icon.svg"
+                  class="cleanupico-id"
+                />
+              </div>
+              <div class="input-pass">
+                <img
+                  src="./images/3643767_key_keys_main_password_privilege_icon.svg"
+                  class="keyico"
+                />
+                <div class="pass-inner">
+                  <form class="passform">
+                    <input
+                      type="password"
+                      placeholder="비밀번호"
+                      class="password"
+                    />
+                  </form>
+                </div>
+                <img
+                  src="./images/10758948_x_circle_icon.svg"
+                  class="cleanupico-pass"
+                />
+              </div>
+              <span class="none-id">아이디를 입력해 주세요</span>
+              <span class="none-password">비밀번호를 입력해 주세요</span>
+              <span class="none-user"
+                >아이디 또는 비밀번호를 잘못 입력하셨습니다</span
+              >
+              <button type="button" class="button">로그인</button>
+            </div>
+            <div class="user-login-menu">
+              <a href="#"><span>회원가입</span></a>
+              <a href="#"><span>아이디 찾기</span></a>
+              <a href="#"><span>비밀번호 찾기</span></a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

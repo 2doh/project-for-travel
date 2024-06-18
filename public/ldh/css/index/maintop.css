@@ -1,0 +1,8 @@
+.main-top-banner{
+    background-color: aquamarine;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}

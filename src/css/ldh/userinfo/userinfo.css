@@ -1,0 +1,18 @@
+.infowrap{
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.alert-wrap{
+    display: flex;
+    align-items: center;
+}
+.alert-msg{
+    padding-left: 10px;
+    color: red;
+}

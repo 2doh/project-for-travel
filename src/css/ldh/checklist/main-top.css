@@ -1,0 +1,29 @@
+.tourwrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+.pagination{
+  display: flex;
+}
+.tourlist {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  border: none;
+}
+.tourlist :hover {
+  cursor: pointer;
+}
+.btnwrap{
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+.main-top-title{
+  color: red;
+  margin-bottom: 10px;
+}
