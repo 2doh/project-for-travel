@@ -22,7 +22,6 @@ const CheckList = () => {
   const [tourId, setTourId] = useState([]);
   const [tourTitle, setTourTitle] = useState([]);
   const [selectedTourId, setSelectedTourId] = useState(null);
-  const [isTourIdSelected, setIsTourIdSelected] = useState(false);
 
   const handleOnSubmit = async e => {
     e.preventDefault();
@@ -32,29 +31,32 @@ const CheckList = () => {
     if (onAdd === "") {
       return setMessage("추가할 물건을 기입해주세요");
     }
-    setOnAdd("");
-    console.log("gd");
-    const result = await postList({ tourId: selectedTourId, title: onAdd });
-    console.log(result);
-    setMessage(result.data.resultMsg);
-    const newItem = {
-      checklistid: result.data.resultData,
-      title: onAdd,
-      checked: false,
-    };
-    setList([...list, newItem]);
+    try {
+      const result = await postList({ tourId: selectedTourId, title: onAdd });
+      setMessage(result.data.resultMsg);
+      const newItem = {
+        checklistid: result.data.resultData,
+        title: onAdd,
+        checked: false,
+      };
+      setList(prevList => [...prevList, newItem]);
+      setOnAdd("");
+    } catch (error) {
+      console.error(error);
+      setMessage("항목 추가에 실패했습니다");
+    }
   };
 
   const handleRemove = async index => {
     try {
-      const selectedCheckListId = list[index].checklistid;
-      const res = await delList(selectedCheckListId);
+      const res = await delList(list[index].checklistid);
       if (res.status === 200) {
-        setList(list.filter((_, i) => i !== index));
+        setList(prevList => prevList.filter((_, i) => i !== index));
         setMessage("삭제되었습니다");
       }
     } catch (error) {
       console.error(error);
+      setMessage("삭제에 실패했습니다");
     }
   };
 
@@ -66,6 +68,7 @@ const CheckList = () => {
       await checkPatch(list[index].checklistid);
     } catch (error) {
       console.error(error);
+      setMessage("체크 상태 변경에 실패했습니다");
     }
   };
 
@@ -77,6 +80,7 @@ const CheckList = () => {
       setMessage("전체 목록이 삭제되었습니다");
     } catch (error) {
       console.error(error);
+      setMessage("전체 삭제에 실패했습니다");
     }
   };
 
@@ -85,15 +89,14 @@ const CheckList = () => {
     try {
       const resultCheck = await getCheckList(data);
       const fetchedList = resultCheck.data.resultData.map(item => ({
-        tour_id: item.checklistId,
+        checklistid: item.checklistId,
         title: item.title,
         checked: item.checked,
       }));
-      setOnAdd("");
       setList(fetchedList);
-      setIsTourIdSelected(true);
     } catch (error) {
       console.error(error);
+      setMessage("체크리스트 불러오기에 실패했습니다");
     }
   };
 
@@ -105,6 +108,7 @@ const CheckList = () => {
       setTourTitle(res.data.resultData.map(item => item.title));
     } catch (error) {
       console.error(error);
+      setMessage("투어 정보를 불러오기에 실패했습니다");
     }
   };
 
@@ -131,7 +135,7 @@ const CheckList = () => {
         </ul>
       </div>
       <List
-        isTourIdSelected={isTourIdSelected}
+        isTourIdSelected={!!selectedTourId}
         list={list}
         message={message}
         onAdd={onAdd}
